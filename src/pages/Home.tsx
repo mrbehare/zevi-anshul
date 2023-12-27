@@ -57,7 +57,7 @@ const Home = () => {
             <div className="latest_trend_box">
               <div className="category_title">Latest Trends</div>
               <div className="latest_trend_products">
-              {(latestTrendsData?.map((product: LatestTrendType, i: number) => {
+              {(latestTrendsData && latestTrendsData.map((product: LatestTrendType, i: number) => {
                   return (
                     <div
                       key={i}
@@ -74,7 +74,7 @@ const Home = () => {
             <div>
               <div className="category_title">Popular Suggestion</div>
               <div>
-                {(suggestionData?.map((product: SuggestionType, i: number) => {
+                {suggestionData && suggestionData.map((product: SuggestionType, i: number) => {
                   return (
                     <div
                       key={i}
@@ -84,7 +84,7 @@ const Home = () => {
                       {product.productName}
                     </div>
                   );
-                }))}
+                })}
               </div>
             </div>
           </div>
@@ -95,3 +95,4 @@ const Home = () => {
 };
 
 export default Home;
+ 
