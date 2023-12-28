@@ -16,9 +16,9 @@ interface MultipleFilterType {
 }
 
 const Products = () => {
-  const [showBrandFilter, setShowBrandFilter] = useState(false);
-  const [showPriceFilter, setShowPriceFilter] = useState(false);
-  const [showRatingFilter, setShowRatingFilter] = useState(false);
+  const [showBrandFilter, setShowBrandFilter] = useState(true);
+  const [showPriceFilter, setShowPriceFilter] = useState(true);
+  const [showRatingFilter, setShowRatingFilter] = useState(true);
   const [products, setProducts] = useState<ProductType[]>(fetchProducts());
   const [multipleFilters, setMultipleFilters] = useState<MultipleFilterType>({
     brand: [false, false],
